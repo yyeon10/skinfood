@@ -1,0 +1,99 @@
+@import url(common.css);
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background: #f29b76;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -10;
+}
+
+.content_box .con_header {
+    text-align: center;
+    padding: 200px 0 50px;
+}
+
+.con_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.con_body > li {
+    width: 100%;
+    height: 850px;
+    padding: 0 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 500px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+.con_body > li.on {
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.con_body > li:nth-of-type(1) {
+    background: url(../img/brand_1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.con_body > li:nth-of-type(1) div,
+.con_body > li:nth-of-type(3) div
+{
+    align-items: flex-start
+}
+
+.con_body > li:nth-of-type(2) {
+    background: url(../img/brand_2.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: right;
+}
+
+.con_body > li:nth-of-type(2) div {
+    
+}
+
+.con_body > li:nth-of-type(3) {
+    background: url(../img/brand_3.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.con_body li span {
+    font-size: 3.333em;
+    color: #ccc;
+}
+
+.con_body li h3 {
+    font-size: 2.222em;
+    padding: 70px 0 55px;
+}
+
+.con_body li:nth-of-type(3) em {
+    font-size: 1.111em;
+}
+
+.con_body li div p {
+    white-space: pre-line;
+    line-height: 1.7em;
+    color: #555;
+}
+
+.con_body li div p:nth-of-type(2) {
+    font-weight: bold;
+    padding: 30px 0;
+}
+
+
+
+

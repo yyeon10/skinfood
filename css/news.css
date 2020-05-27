@@ -1,0 +1,172 @@
+@import url(common.css);
+.circle {
+     width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background: #f99e9e;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -10;
+}
+
+.content_box {}
+
+.content_box .con_body {}
+
+.content_box .con_body .con_menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.content_box .con_body .con_menu span {
+    margin: 0 50px;
+    cursor: pointer;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.content_box .con_body .con_menu span.on {
+    font-weight: bold;
+    color: #f99e9e;
+}
+
+.content_box .con_list {
+    width: 82%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.content_box .con_list li {
+    margin: 20px 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.content_box .con_list li .news_title {
+    background: rgba(255, 255, 255, 0.7) url(../img/icon_more.png) no-repeat right 20px center;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    transition: .5s;
+}
+
+.content_box .con_list li:hover .news_title {
+    bottom: 0;
+}
+
+.content_box .con_list .news_title h3 {
+    font-weight: normal;
+    font-size: 0.833em;
+    line-height: 50px;
+    padding: 0 20px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.content_box .pop_all {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.content_box .pop_all.on {
+    visibility: visible;
+}
+
+.content_box .pop_all .pop_up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 70px;
+}
+
+.content_box .pop_all .pop_up p {
+    white-space: pre-line;
+    width: 450px;
+    font-size: 0.833em;
+    line-height: 2em;
+    height: 450px;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.content_box .pop_all .pop_up div {
+    display: flex;
+}
+
+.content_box .pop_all .pop_up img {
+    width: 450px;
+}
+
+.content_box .pop_all .pop_up img:nth-of-type(1) {
+    margin-right: 20px;
+}
+
+.content_box .pop_all .pop_up .pop_header {display: flex; align-items: center; padding-bottom: 20px;}
+
+.content_box .pop_all .pop_up .pop_header figcaption {
+    display: flex; flex-direction: column;
+}
+
+.content_box .pop_all .pop_up .pop_header figcaption small {
+    font-size: 0.833em;
+    padding-top: 5px;
+}
+
+.content_box .pop_all .pop_up .pop_header img {
+    width: 50px;
+}
+
+
+.content_box .pop_all .close_btn {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 50px 0;
+    cursor: pointer;
+    background: url(../img/icon_close.png) no-repeat center center;
+    background-size: contain;
+}
+
+.content_box .pop_all .close_btn:hover {
+    background: url(../img/icon_close_p.png) no-repeat center center;
+    background-size: contain;
+}
+
+
+.content_box .more_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.content_box .more_btn figcaption {
+    font-size: 0.833em;
+    padding-top: 10px;
+}
+

@@ -1,0 +1,162 @@
+{
+     "newslist": [
+         
+         {
+             "datanum": "1",
+             "datatype": "product",
+             "thumimg": "img/news_1.jpg",
+             "title": "유자 수분C 크림",
+             "date": "2016-03-18",
+             "img1": "img/news_1_1.jpg",
+             "img2": "img/news_1_2.jpg"
+         },
+         {
+             "datanum": "2",
+             "datatype": "event",
+             "thumimg": "img/news_2.jpg",
+             "title": "스킨푸드, ‘시리얼 러버 마스크’ 3종 출시",
+             "date": "2017-12-19",
+             "img1": "img/news_2_1.jpg",
+             "detail": "시리얼로 챙기는 피부건강 \n 스킨푸드, ‘시리얼 러버 마스크’ 3종 출시 \n 시리얼 곡물의 효능을 담아 피부 컨디션을 올려주는 홈케어 모델링 마스크 \n ‘라이스’, ‘오트밀’, ‘카카오 닙스’ 마스크 3종 구성"
+         },
+         {
+             "datanum": "3",
+             "datatype": "cf",
+             "thumimg": "img/news_3.jpg",
+             "title": "스킨푸드 김유정의 빛낯피부 유자 수분C 크림 CF",
+             "date": "2016-02-29",
+             "url":"https://www.youtube.com/embed/TYHWjaORJyo"
+         },
+         {
+             "datanum": "4",
+             "datatype": "cf",
+             "thumimg": "img/news_4.jpg",
+             "title": "스킨푸드 김유정의 촉촉탄탄 꿀벽피부 로열허니 프로폴리스 에센스 장벽 크림 CF",
+             "date": "2016-01-05",
+             "url": "https://www.youtube.com/embed/q_Q1bM5_m0U"
+         },
+         {
+             "datanum": "5",
+             "datatype": "event",
+             "thumimg": "img/news_5.jpg",
+             "title": "스킨푸드, ‘12월 멤버십 데이’ 실시",
+             "date": "2017-12-19",
+             "img1": "img/news_5_1.jpg",
+             "detail": "2017년 마지막 #겨울득템 찬스! \n 스킨푸드, ‘12월 멤버십 데이’ 실시 \n 12월 7일(목)~9일(토), 총 3일간 12월 멤버십 데이 진행 \n 멤버십 회원 등급에 따라 최대 30%까지 할인 \n 프리미엄 아보카도 기초라인 50% 특별 할인 및 마스크 시트 10+10 혜택 제공"
+         },
+         {
+             "datanum": "6",
+             "datatype": "product",
+             "thumimg": "img/news_6.jpg",
+             "title": "로열허니 프로폴리스 에센스 & 장벽크림",
+             "date": "2016-01-04",
+             "img1": "img/news_6_1.jpg",
+             "img2": "img/news_6_2.jpg"
+         },
+         {
+             "datanum": "7",
+             "datatype": "product",
+             "thumimg": "img/news_7.jpg",
+             "title": "포어 핏 퓨어 스킨 쿠션",
+             "date": "2016-02-12",
+             "img1": "img/news_7_1.jpg",
+             "img2": "img/news_7_2.jpg"
+         },
+         {
+             "datanum": "8",
+             "datatype": "event",
+             "thumimg": "img/news_8.jpg",
+             "title": "스킨푸드, ‘메리 스윗 홀리데이 에디션’ 출시",
+             "date": "2017-12-19",
+             "img1": "img/news_8_1.jpg",
+             "detail": "스킨푸드와 달콤하게 메리 스윗 크리스마스! \n 스킨푸드, ‘메리 스윗 홀리데이 에디션’ 출시 \n 컬러풀한 캔디처럼 스윗한 홀리데이 시즌 한정 에디션 \n 크리스마스 캔디케인 모티브의 사랑스러운 패키지 \n 색조 5종, 기초 5종 총 10종으로 구성"
+         },
+         {
+             "datanum": "9",
+             "datatype": "cf",
+             "thumimg": "img/news_9.jpg",
+             "title": "스킨푸드 TV CF 포어 핏 쿠션 보틀 모공 쿨링 CF",
+             "date": "2015-05-08",
+             "url": "https://www.youtube.com/embed/5D_pJKGzwsk"
+         },
+         {
+             "datanum": "10",
+             "datatype": "cf",
+             "thumimg": "img/news_10.jpg",
+             "title": "스킨푸드 김유정의 매끈 맑은 결 블랙슈가 퍼펙트 첫세럼 2X CF",
+             "date": "2015-09-07",
+             "url": "https://www.youtube.com/embed/mDw3GUCkdus"
+         },
+         {
+             "datanum": "11",
+             "datatype": "event",
+             "thumimg": "img/news_11.jpg",
+             "title": "스킨푸드, ‘슈가컬러 틴트 인 밤’ 출시",
+             "date": "2017-12-19",
+             "img1": "img/news_11_1.jpg",
+             "detail": "달콤 촉촉 슈가 컬러를 내 입술에! 혹한기 #착붙립 메이크업 \n 스킨푸드, ‘슈가컬러 틴트 인 밤’ 출시 \n 슈가추출물 함유, 건조한 입술에 촉촉한 보습 효과 선사 \n 맑은 컬러와 광택감으로 생기 있는 입술 연출"
+         },
+         {
+             "datanum": "12",
+             "datatype": "product",
+             "thumimg": "img/news_12.jpg",
+             "title": "블랙슈가 퍼펙트 첫세럼 2X",
+             "date": "2015-11-13",
+             "img1": "img/news_12_1.jpg",
+             "img2": "img/news_12_2.jpg"
+         },
+         {
+             "datanum": "13",
+             "datatype": "product",
+             "thumimg": "img/news_13.jpg",
+             "title": "열려라 딥촉! 0.9 수분크림",
+             "date": "2015-08-17",
+             "img1": "img/news_13_1.jpg",
+             "img2": "img/news_13_2.jpg"
+         },
+         {
+             "datanum": "14",
+             "datatype": "event",
+             "thumimg": "img/news_14.jpg",
+             "title": "스킨푸드, ‘초코 파우더 브로우 펜슬’ 2종 출시",
+             "date": "2017-12-19",
+             "img1": "img/news_14_1.jpg",
+             "detail": "부드러운 초코 파우더처럼, 뭉침 없이 쉽게! \n 스킨푸드, ‘초코 파우더 브로우 펜슬’ 2종 출시 \n 부드러운 질감으로 뭉침 없이 고르게 발색되는 간편 눈썹 메이크업 라인 \n 브로우 오토 펜슬, 브로우 우드 펜슬로 구성"
+         },
+         {
+             "datanum": "15",
+             "datatype": "cf",
+             "thumimg": "img/news_15.jpg",
+             "title": "스킨푸드 김유정의 열려라 딥촉 0.9 수분 크림 광고 CF",
+             "date": "2015-07-31",
+             "url": "https://www.youtube.com/embed/fJzMbu7y9UI"
+         },
+         {
+             "datanum": "16",
+             "datatype": "cf",
+             "thumimg": "img/news_16.jpg",
+             "title": "스킨푸드 유정이와 함께 하는 매끈 모공 칙톡왈츠 광고 CF",
+             "date": "2015-05-08",
+             "url": "https://www.youtube.com/embed/wNsWKQRI76E"
+         },
+         {
+             "datanum": "17",
+             "datatype": "event",
+             "thumimg": "img/news_17.jpg",
+             "title": "스킨푸드, ‘아보카도 스틱 립밤’ 출시",
+             "date": "2017-12-19",
+             "img1": "img/news_17_1.jpg",
+             "detail": "간편하게 쓱쓱! 하루 종일 촉촉 매끈 입술 \n 스킨푸드, ‘아보카도 스틱 립밤’ 출시 \n 천연 아보카도 오일 함유로 건조한 입술에 영양 보습 선사 \n 고보습 케어의 리치 타입, 멘톨 성분의 상쾌한 프레쉬 타입 총 2종 구성"
+         },
+         {
+             "datanum": "18",
+             "datatype": "product",
+             "thumimg": "img/news_18.jpg",
+             "title": "포어 핏 쿠션 보틀 칙톡 쿠션",
+             "date": "2015-05-29",
+             "img1": "img/news_18_1.jpg",
+             "img2": "img/news_18_2.jpg"
+         }
+         
+     ]
+}

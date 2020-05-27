@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>스킨푸드</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcur icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+   
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>
+                <a href="index.html">
+                    <img src="img/skinfood_logo.png" alt="">
+                </a>
+            </h1>
+            <nav> <a href="skinfood.html">skinfood</a> <a href="brandstory.html">brand story</a> <a href="findstore.html">store</a> <a href="foodlineup.html">food lineup</a> <a href="news.html">news</a>
+                <div class="burger_menu"> <span></span> <span></span> <span></span> </div>
+            </nav>
+            <div class="sub_menu"> 
+               <a href="skinfood.html" data-num="0">skinfood</a> 
+               <a href="brandstory.html" data-num="1">brand story</a> 
+               <a href="findstore.html" data-num="2">find store</a> 
+               <a href="makestore.html" data-num="2">make store</a> 
+               <a href="foodlineup.html" data-num="3">food lineup</a> 
+               <a href="news.html" data-num="4">news</a>
+                <div> <span></span> <span></span> </div>
+            </div>
+        </header>
+        <div class="back_img">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <section class="content_box">
+            <div class="con_indi"> <span><img src="img/icon_left.png" alt=""></span> <span><img src="img/icon_right.png" alt=""></span> <em>1 / 3</em> <span></span> </div>
+            <ul class="con_all">
+                <li class="on">
+                    <div class="con_text"> <strong>
+                            better food
+                        </strong>
+                        <p>건강한 푸드 속에는 피부를 아름답게 만드는 놀라운 능력이 있다는 믿음으로 
+                        스킨푸드는 보다 좋은 푸드를 찾기 위해 수많은 노력을 하고 있습니다.</p>
+                        <a href="brandstory.html"> <em>스킨푸드의 맛있는 이야기를 들어보세요</em> <img src="img/icon_arrow_w.png" alt=""> </a>
+                    </div>
+                    <div class="con_video" id="player"> </div>
+                </li>
+                <li>
+                    <div class="con_text"> <strong>
+                            better beauty
+                        </strong>
+                        <p>스킨푸드는 푸드 속에 아름다움이 있음을 믿고
+                        조금 느리더라도 바르게 가고자 노력합니다</p>
+                        <a href="findstore.html"> <em>스킨푸드를 만나실 수 있는 오프라인 매장을 소개합니다</em> <img src="img/icon_arrow_w.png" alt=""> </a>
+                    </div>
+                    <div class="con_video" id="player2"> </div>
+                </li>
+                <li>
+                    <div class="con_text"> <strong>
+                            better healthy
+                        </strong>
+                        <p>스킨푸드는 아름다운 피부를 만드는 데에만 머무르지 않습니다.
+                        아름다움은 물론, 그 이상의 건강한 라이프스타일을 응원합니다.</p>
+                        <a href="foodlineup.html"> <em>스킨푸드에서 건강한 푸드를 만나보세요</em> <img src="img/icon_arrow_w.png" alt=""> </a>
+                    </div>
+                    <div class="con_video" id="player3"> </div>
+                </li>
+            </ul>
+        </section>
+        <footer> <span>Copyright&copy; 2020 SKINFOOD. ALL RIGHTS RESERVED.</span>
+            <div class="news_list"> <em>NEWS!</em>
+                <ul>
+                    <li class="on"><a href="news.html">‘시리얼 러버 마스크’ 3종 출시</a></li>
+                    <li><a href="news.html">‘12월 멤버십 데이’ 실시</a></li>
+                    <li><a href="news.html">‘우수회원 키트’ 증정 이벤트 실시</a></li>
+                    <li><a href="news.html">‘메리 스윗 홀리데이 에디션’ 출시</a></li>
+                </ul> <span><img src="img/icon_up.png" alt=""></span> <span><img src="img/icon_down.png" alt=""></span> </div>
+        </footer>
+    </div>
+    
+    <script>
+
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+        var player2;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '495'
+                , width: '880'
+                , videoId: 'TYHWjaORJyo'
+                , events: {
+                    'onReady': onPlayerReady
+                    , 'onStateChange': onPlayerStateChange
+                }
+            });
+            player2 = new YT.Player('player2', {
+                height: '495'
+                , width: '880'
+                , videoId: 'fJzMbu7y9UI'
+                , events: {
+                    'onReady': onPlayerReady
+                    , 'onStateChange': onPlayerStateChange
+                }
+            });
+            player3 = new YT.Player('player3', {
+                height: '495'
+                , width: '880'
+                , videoId: 'q_Q1bM5_m0U'
+                , events: {
+                    'onReady': onPlayerReady
+                    , 'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            //event.target.playVideo();
+        }
+        var playState=0;
+        function onPlayerStateChange(event) {
+            player.getPlayerState();
+            player2.getPlayerState();
+            player3.getPlayerState();
+        }
+        function aa(){
+            return playState;
+        }
+   
+    </script>
+    <script src="js/index.js"></script>
+     
+</body>
+
+</html>

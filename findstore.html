@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>매장 찾기 - skinfood</title>
+    <link rel="stylesheet" href="css/findstore.css">
+    <link rel="shortcur icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scroll/jquery.mCustomScrollbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/findstore.js"></script>
+  
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>
+                <a href="index.html">
+                    <img src="img/skinfood_logo_b.png" alt="">
+                </a>
+            </h1>
+            <nav> <a href="skinfood.html">skinfood</a> <a href="brandstory.html">brand story</a> <a href="findstore.html">store</a> <a href="foodlineup.html">food lineup</a> <a href="news.html">news</a>
+                <div class="burger_menu"> <span></span> <span></span> <span></span> </div>
+            </nav>
+            <div class="sub_menu"> 
+               <a href="skinfood.html" data-num="0">skinfood</a> 
+               <a href="brandstory.html" data-num="1">brand story</a> 
+               <a href="findstore.html" data-num="2">find store</a> 
+               <a href="makestore.html" data-num="2">make store</a> 
+               <a href="foodlineup.html" data-num="3">food lineup</a> 
+               <a href="news.html" data-num="4">news</a>
+                <div> <span></span> <span></span> </div>
+            </div>
+            </div>
+        </header>
+        <div class="circle">
+            <span></span>
+        </div>
+        <section class="content_box">
+            <div class="con_header">
+                <em>FIND STORE</em>
+                <h2>매장 찾기</h2>
+                <small>스킨푸드를 만나실 수 있는 특별한 오프라인 매장들을 소개합니다.</small>
+            </div>
+            <div class="con_finder">
+                <h3>FIND STORE</h3>
+                <input type="text" value="시 / 도" readonly>
+                <div class="loca_body">
+                    <ul class="loca_list">
+                    
+                    </ul>
+                </div>
+                <span>가까운 매장 찾기</span>
+                <span>전체 매장 보기</span>
+                <div class="store_body">
+                    <ul class="store_list" >
+
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="map" style="width:1300px;height:650px;"></div>
+            
+            <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=7dcae43fb95a9a0b0f411a0a003c8df3&libraries=services"></script>
+            
+        
+            <script>
+                // 인포윈도우
+                var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = {
+                        center: new kakao.maps.LatLng(37.5560383,126.936851), // 지도의 중심좌표
+                        level: 2 // 지도의 확대 레벨
+                    };  
+
+                // 지도를 생성합니다    
+                var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+                // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+                var mapTypeControl = new kakao.maps.MapTypeControl();
+
+                // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+                // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+                map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+                // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+                var zoomControl = new kakao.maps.ZoomControl();
+                map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+                // 장소 검색 객체를 생성합니다
+                var ps = new kakao.maps.services.Places(); 
+
+                // 키워드로 장소를 검색합니다
+                function key(a){
+                    ps.keywordSearch(a, placesSearchCB); 
+                }
+                
+                // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+            
+                function placesSearchCB (data, status, pagination) {
+                    if (status === kakao.maps.services.Status.OK) {
+
+                        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+                        // LatLngBounds 객체에 좌표를 추가합니다
+                        var bounds = new kakao.maps.LatLngBounds();
+
+                        for (var i=0; i<data.length; i++) {
+                            displayMarker(data[i]);    
+                            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+                        }       
+
+                        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+                        map.setBounds(bounds);
+                    } 
+                }
+                
+                // 지도에 마커를 표시하는 함수입니다
+                function displayMarker(place) {
+
+                    // 마커를 생성하고 지도에 표시합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: new kakao.maps.LatLng(place.y, place.x) 
+                    });
+
+                    // 인포 윈도우
+                    infowindow.setContent('<div style="width: 150px;;padding:10px;font-size:12px;text-align:center;">' + place.place_name + '</div>');
+                    infowindow.open(map, marker);
+                    console.log($('#map div div div div div').eq(0))
+                    setTimeout(function(){
+                        $('#map div div div div div').eq(0).css("top","32px")
+                    },5)
+                    
+                }
+                
+            </script>
+            
+        </section>
+        <aside>
+           <span><img src="img/icon_arrow.png" alt=""></span>
+        </aside>
+        <footer>
+            <h4><img src="img/skinfood_logo.png" alt=""></h4>
+            <div class="footer_con">
+                <p>상호 : (주)스킨푸드 ㅣ 대표이사 유근직 ㅣ Tel : 02-597-4191 ㅣ Fax : 02-597-4199
+                주소 : 경기도 안성시 미양면 계륵리 267-4 스킨푸드
+                사업자등록번호 : 125-81-54503 ㅣ 통신사업자번호 : 제2005-50호
+                제휴문의 : webmaster@theskinfood.com
+                호스팅 사업자 : 영우디지탈</p>
+                <span>Copyright© 2015 SKINFOOD. ALL RIGHTS RESERVED.</span>
+            </div>
+            <input type="text" value="KOREAN" readonly>
+            <ul class="lang_box">
+                <li>KOREAN</li>
+                <li>ENGLISH</li>
+                <li>CHINESE</li>
+            </ul>
+        </footer>
+    </div>
+    
+    	
+    
+    	
+    	
+    	
+</div>
+</body>
+</html>
